@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Price {
-    private PriceItem base;
-    private PriceItem adjustment;
+public class PriceItem {
+    private String currencyCode;
+    private String value;
 }

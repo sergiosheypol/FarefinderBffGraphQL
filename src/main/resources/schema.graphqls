@@ -1,0 +1,31 @@
+type Fare {
+    flightNumber: String
+    departureAirport: String
+    arrivalAirport: String
+    connectingAirport: String
+    departureDate: String
+    arrivalDate: String
+    price: Price
+}
+
+type Price {
+    base: PriceItem
+    adjustment: PriceItem
+}
+
+type PriceItem {
+    currencyCode: String
+    value: String
+}
+
+input FarefinderDto {
+    departureDateFrom: String
+    departureDateTo: String
+    arrivalAirport: String
+    departureAirport: String
+    currencyCode: String
+}
+
+type Query {
+    fares(dto: FarefinderDto): [Fare]
+}

@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,7 +18,7 @@ public class Fare {
     private String departureAirport;
     private String arrivalAirport;
     private String connectingAirport;
-    private String departureDate;
-    private String arrivalDate;
+    private LocalDateTime departureDate;
+    private LocalDateTime arrivalDate;
     private Price price;
 }
